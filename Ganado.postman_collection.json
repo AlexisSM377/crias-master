@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "ede3d011-39b3-46ae-ae67-e67ba3db751c",
+		"name": "Ganado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4552604"
+	},
+	"item": [
+		{
+			"name": "crias",
+			"item": [
+				{
+					"name": "consulta de crias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crias/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar cria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "crias",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "33",
+									"type": "text"
+								},
+								{
+									"key": "color_muscular",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "marmoleo",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "costo",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "asds2das",
+									"type": "text"
+								},
+								{
+									"key": "proveedor_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "proceso_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "clasificacion_carne_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "corral_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crias",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cria especifica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crias/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crias",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrado de cria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crias/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crias",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crias/:id?peso=3000&color_muscular=66666&marmoleo=4&costo=5000&name=crias ejemplo&descripcion=ejeo&proveedor_id=3&proceso_id=4&clasificacion_carne_id=1&corral_id=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crias",
+								":id"
+							],
+							"query": [
+								{
+									"key": "peso",
+									"value": "3000"
+								},
+								{
+									"key": "color_muscular",
+									"value": "66666"
+								},
+								{
+									"key": "marmoleo",
+									"value": "4"
+								},
+								{
+									"key": "costo",
+									"value": "5000"
+								},
+								{
+									"key": "name",
+									"value": "crias ejemplo"
+								},
+								{
+									"key": "descripcion",
+									"value": "ejeo"
+								},
+								{
+									"key": "proveedor_id",
+									"value": "3"
+								},
+								{
+									"key": "proceso_id",
+									"value": "4"
+								},
+								{
+									"key": "clasificacion_carne_id",
+									"value": "1"
+								},
+								{
+									"key": "corral_id",
+									"value": "2"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "proveedores",
+			"item": [
+				{
+					"name": "consulta de proveedores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/proveedores/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proveedores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar proveedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "sdfdsf",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dsfdsf@dsfdsf.com",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "34234324324",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "fdsfdsf fdgfdgdfgfd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/proveedores/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proveedores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar proveedor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/proveedores/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proveedores",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrado de proveedor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/proveedores/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proveedores",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar proveedor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/proveedores/:id?nombre=sdfdsf&email=dsfdsf@dsfdsf.com&telefono=34234324324&direccion=fdsfdsf fdgfdgdfgfd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proveedores",
+								":id"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "sdfdsf"
+								},
+								{
+									"key": "email",
+									"value": "dsfdsf@dsfdsf.com"
+								},
+								{
+									"key": "telefono",
+									"value": "34234324324"
+								},
+								{
+									"key": "direccion",
+									"value": "fdsfdsf fdgfdgdfgfd"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dietas",
+			"item": [
+				{
+					"name": "consulta de dietas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dietas/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dietas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar dieta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dietas/?dieta=dfdsfdsf&tratamiento=dsfdsf&cria_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dietas",
+								""
+							],
+							"query": [
+								{
+									"key": "dieta",
+									"value": "dfdsfdsf"
+								},
+								{
+									"key": "tratamiento",
+									"value": "dsfdsf"
+								},
+								{
+									"key": "cria_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar dieta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dietas/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dietas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrado dieta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dietas/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dietas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar dieta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dietas/:id?dieta=dfdsfdsf&tratamiento=dsfdsf&cria_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dietas",
+								":id"
+							],
+							"query": [
+								{
+									"key": "dieta",
+									"value": "dfdsfdsf"
+								},
+								{
+									"key": "tratamiento",
+									"value": "dsfdsf"
+								},
+								{
+									"key": "cria_id",
+									"value": "3"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensores",
+			"item": [
+				{
+					"name": "consulta de sensores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sensores/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar sensor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "frecuencia_cardiaca",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "frecuencia_sanguinea",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "frecuencia_respiratoria",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "temperatura",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "saludable",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "cria_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sensores/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar sensor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sensores/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensores",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrado de sensor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sensores/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensores",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar sensor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sensores/:id?frecuencia_cardiaca=3&frecuencia_sanguinea=4&frecuencia_respiratoria=3&temperatura=34&saludable=0&cria_id=6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensores",
+								":id"
+							],
+							"query": [
+								{
+									"key": "frecuencia_cardiaca",
+									"value": "3"
+								},
+								{
+									"key": "frecuencia_sanguinea",
+									"value": "4"
+								},
+								{
+									"key": "frecuencia_respiratoria",
+									"value": "3"
+								},
+								{
+									"key": "temperatura",
+									"value": "34"
+								},
+								{
+									"key": "saludable",
+									"value": "0"
+								},
+								{
+									"key": "cria_id",
+									"value": "6"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
